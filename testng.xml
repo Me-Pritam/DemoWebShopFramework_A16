@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--@BeforeSuite-->
+<suite name="All Test Suite">
+<!--@BeforeTest-->
+    <test name="dummytest">
+        <classes>
+    <!--@BeforeClass-->
+            <class name="testpackage.ExecutingDummyBaseClass">
+                <methods>
+            <!--@BeforeMethod-->
+                    <include name="testMethod"/>
+            <!--@AfterMethod-->
+                </methods>
+            </class>
+    <!--@AfterClass-->
+        </classes >
+    </test>
+<!--@AfterTest-->
+</suite>
+<!--@AfterSuite-->
