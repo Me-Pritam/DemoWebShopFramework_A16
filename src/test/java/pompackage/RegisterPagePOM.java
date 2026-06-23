@@ -30,9 +30,18 @@ public class RegisterPagePOM
     @FindBy(xpath = "//input[@id='register-button']")
     private WebElement registerButton;
 
+    @FindBy(xpath = "//div[@class='page registration-result-page']/descendant::div[@class='result']")
+    private WebElement registrationConfirmText;
+
+
+
     public RegisterPagePOM(WebDriver driver)
     {
         PageFactory.initElements(driver,this);
+    }
+
+    public WebElement getRegistrationConfirmText() {
+        return registrationConfirmText;
     }
 
 

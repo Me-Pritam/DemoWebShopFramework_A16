@@ -10,12 +10,18 @@ public class NavBarPOM
     By logInLink = By.xpath("//a[@href='/login']");
     By shoppingCartLinkOnTop = By.xpath("//li[@id='topcartlink']/a[@href='/cart']");
     By wishListLinkOnTop = By.xpath("//div[@class='header-links']/descendant::a[@href='/wishlist']");
+    By booksLink = By.xpath("//div[@class='header-menu']/descendant::a[@href='/books']");
 
     WebDriver driver;
 
     public NavBarPOM(WebDriver driver)
     {
         this.driver = driver;
+    }
+
+    public WebElement getBooksLink()
+    {
+        return driver.findElement(booksLink);
     }
 
     public WebElement getRegisterLink() {

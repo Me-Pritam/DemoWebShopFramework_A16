@@ -12,8 +12,8 @@ import utilitypackage.PropertyFileUtils;
 
 public class RegisterBaseClass
 {
-    PropertyFileUtils property ;
-    BrowserUtils browserUtils;
+    public PropertyFileUtils property ;
+    public BrowserUtils browserUtils;
     public ActionsUtil actions;
     ExecelFileUtility excel;
 

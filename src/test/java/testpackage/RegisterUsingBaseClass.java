@@ -1,6 +1,8 @@
 package testpackage;
 
 import baseclasspackage.RegisterBaseClass;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class RegisterUsingBaseClass extends RegisterBaseClass
@@ -21,5 +23,8 @@ public class RegisterUsingBaseClass extends RegisterBaseClass
         actions.writeInInputField(register.getPasswordField(),password);
         actions.writeInInputField(register.getConfirmPasswordField(),confirmPassword);
         actions.clickOnElement(register.getRegisterButton());
+
+        Assert.assertEquals(register.getRegistrationConfirmText().isDisplayed(),true,"The Registration Confirmation text is not displayed");
+        Reporter.log("The Registration Confirmation Text is displayed",true);
     }
 }
