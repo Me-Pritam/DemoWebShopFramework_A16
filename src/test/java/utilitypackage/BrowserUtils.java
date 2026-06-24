@@ -3,8 +3,11 @@ package utilitypackage;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
@@ -17,14 +20,14 @@ public class BrowserUtils
         switch (browser.toLowerCase())
         {
             case "chrome":
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(new ChromeOptions().addArguments("--headless"));
                 break;
             case "firefox":
-                driver = new FirefoxDriver();
+                driver = new FirefoxDriver(new FirefoxOptions().addArguments("-headless"));
                 break;
             case "edge":
                 System.setProperty("webdriver.edge.driver","./AllBrowserDrivers/msedgedriver.exe");
-                driver = new EdgeDriver();
+                driver = new EdgeDriver(new EdgeOptions().addArguments("--headless"));
                 break;
             default:throw new InvalidArgumentException("Incorrect Browser Name");
 
@@ -54,6 +57,11 @@ public class BrowserUtils
     public void waitForElementsLoad(int num)
     {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(num));
+    }
+
+    public String getRunningURL()
+    {
+        return getDriver().getCurrentUrl();
     }
 
     public void closeBrowser()
