@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AssertionExecution">
+    <test name="AssertionClass">
+        <classes>
+            <class name="testpackage.AddingItemToCart_Hard_Soft_Assertion">
+                <methods>
+                    <include name="clickOnBooksLink"/>
+                    <include name="checkBookVisibility"/>
+                    <include name="clickOnTheBook"/>
+                    <include name="addBookToCart"/>
+                    <include name="goToCart"/>
+                    <include name="checkProductVisibility"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
