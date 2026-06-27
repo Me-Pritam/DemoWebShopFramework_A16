@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">AssertionExecution</th></tr>
+<tr><td><a href="#t0">AssertionClass</a></td><td class="num">3</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,216</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AssertionExecution</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AssertionClass &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testpackage.AddingItemToCart_Hard_Soft_Assertion</td><td><a href="#m0">addBookToCart</a></td><td rowspan="1">1782361982512</td><td rowspan="1">706</td></tr><tr><th colspan="4">AssertionClass &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">testpackage.AddingItemToCart_Hard_Soft_Assertion</td><td><a href="#m1">checkProductVisibility</a></td><td rowspan="1">1782361983227</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">goToCart</a></td><td rowspan="1">1782361983226</td><td rowspan="1">0</td></tr><tr><th colspan="4">AssertionClass &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testpackage.AddingItemToCart_Hard_Soft_Assertion</td><td><a href="#m3">checkBookVisibility</a></td><td rowspan="1">1782361981830</td><td rowspan="1">537</td></tr><tr class="passedeven"><td><a href="#m4">clickOnBooksLink</a></td><td rowspan="1">1782361981573</td><td rowspan="1">252</td></tr><tr class="passedeven"><td><a href="#m5">clickOnTheBook</a></td><td rowspan="1">1782361982369</td><td rowspan="1">142</td></tr></tbody>
+</table>
+<h2>AssertionClass</h2><h3 id="m0">testpackage.AddingItemToCart_Hard_Soft_Assertion#addBookToCart</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Redirected To desired Book Page<br/>Add to cart button is displayed<br/>Clicked on the Add to Cart Button</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	Not Redirected to Desired Book Page expected [false] but found [true],
+	Add to cart button is not displayed did not expect [true] but found [true]
+	at testpackage.AddingItemToCart_Hard_Soft_Assertion.addBookToCart(AddingItemToCart_Hard_Soft_Assertion.java:73)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testpackage.AddingItemToCart_Hard_Soft_Assertion#checkProductVisibility</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method testpackage.AddingItemToCart_Hard_Soft_Assertion.checkProductVisibility() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f depends on not successfully finished methods 
+[testpackage.AddingItemToCart_Hard_Soft_Assertion.goToCart() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testpackage.AddingItemToCart_Hard_Soft_Assertion#goToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method testpackage.AddingItemToCart_Hard_Soft_Assertion.goToCart() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f depends on not successfully finished methods 
+[testpackage.AddingItemToCart_Hard_Soft_Assertion.addBookToCart() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testpackage.AddingItemToCart_Hard_Soft_Assertion#checkBookVisibility</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Redirected To Books Resource<br/>The Desired Book is displayed</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testpackage.AddingItemToCart_Hard_Soft_Assertion#clickOnBooksLink</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The Books link is displayed<br/>Clicked on the BooksLink</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testpackage.AddingItemToCart_Hard_Soft_Assertion#clickOnTheBook</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The Computing And Internet Book is clicked</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

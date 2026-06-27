@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AssertionExecution]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AssertionClass(failed)">
+    <classes>
+      <class name="testpackage.AddingItemToCart_Hard_Soft_Assertion">
+        <methods>
+          <include name="addBookToCart"/>
+          <include name="goToCart"/>
+          <include name="performConfig"/>
+          <include name="clickOnTheBook"/>
+          <include name="checkBookVisibility"/>
+          <include name="loadConfig"/>
+          <include name="clickOnBooksLink"/>
+          <include name="checkProductVisibility"/>
+        </methods>
+      </class> <!-- testpackage.AddingItemToCart_Hard_Soft_Assertion -->
+    </classes>
+  </test> <!-- AssertionClass(failed) -->
+</suite> <!-- Failed suite [AssertionExecution] -->
