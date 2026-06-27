@@ -3,6 +3,7 @@ package testpackage;
 import baseclasspackage.AddingItemToCartBaseClass;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestListener;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -29,8 +30,6 @@ public class AddingItemToCart_Hard_Soft_Assertion extends AddingItemToCartBaseCl
         Reporter.log("Clicked on the BooksLink",true);
 
         softAssert.assertAll();
-
-
 
     }
 

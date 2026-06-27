@@ -8,33 +8,36 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">AssertionExecution</th></tr>
-<tr><td><a href="#t0">AssertionClass</a></td><td class="num">3</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,216</td><td></td><td></td></tr>
+<tr><th colspan="8">Listener Execution Suite</th></tr>
+<tr><td><a href="#t0">Listener_Execution</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">15,509</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AssertionExecution</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AssertionClass &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testpackage.AddingItemToCart_Hard_Soft_Assertion</td><td><a href="#m0">addBookToCart</a></td><td rowspan="1">1782361982512</td><td rowspan="1">706</td></tr><tr><th colspan="4">AssertionClass &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">testpackage.AddingItemToCart_Hard_Soft_Assertion</td><td><a href="#m1">checkProductVisibility</a></td><td rowspan="1">1782361983227</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">goToCart</a></td><td rowspan="1">1782361983226</td><td rowspan="1">0</td></tr><tr><th colspan="4">AssertionClass &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testpackage.AddingItemToCart_Hard_Soft_Assertion</td><td><a href="#m3">checkBookVisibility</a></td><td rowspan="1">1782361981830</td><td rowspan="1">537</td></tr><tr class="passedeven"><td><a href="#m4">clickOnBooksLink</a></td><td rowspan="1">1782361981573</td><td rowspan="1">252</td></tr><tr class="passedeven"><td><a href="#m5">clickOnTheBook</a></td><td rowspan="1">1782361982369</td><td rowspan="1">142</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Listener Execution Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Listener_Execution &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testpackage.AddToCartButtonVisibility_Listeners</td><td><a href="#m0">checkAddToCartButtonVisibility</a></td><td rowspan="1">1782534735844</td><td rowspan="1">5054</td></tr><tr><th colspan="4">Listener_Execution &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testpackage.AddToCartButtonVisibility_Listeners</td><td><a href="#m1">checkBookPageVisibility</a></td><td rowspan="1">1782534734487</td><td rowspan="1">1355</td></tr><tr class="passedeven"><td><a href="#m2">clickOnBooksLink</a></td><td rowspan="1">1782534733715</td><td rowspan="1">757</td></tr></tbody>
 </table>
-<h2>AssertionClass</h2><h3 id="m0">testpackage.AddingItemToCart_Hard_Soft_Assertion#addBookToCart</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Redirected To desired Book Page<br/>Add to cart button is displayed<br/>Clicked on the Add to Cart Button</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Not Redirected to Desired Book Page expected [false] but found [true],
-	Add to cart button is not displayed did not expect [true] but found [true]
-	at testpackage.AddingItemToCart_Hard_Soft_Assertion.addBookToCart(AddingItemToCart_Hard_Soft_Assertion.java:73)
+<h2>Listener_Execution</h2><h3 id="m0">testpackage.AddToCartButtonVisibility_Listeners#checkAddToCartButtonVisibility</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The checkAddToCartButtonVisibility method is started executing<br/>Add to cart Button is present</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: .//descendant::input[@value=&apos;Add to cart&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [c146ea97-b445-4e8a-a940-7c30fb4910fc, findChildElement {using=xpath, id=0de25f4f-65b9-4acb-b00d-3740368dca0e, value=.//descendant::input[@value=&apos;Add to cart&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 152.0.3, moz:accessibilityChecks: false, moz:buildID: 20260624221428, moz:geckodriverVersion: 0.37.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20100, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: c146ea97-b445-4e8a-a940-7c30fb4910fc
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)
+	at testpackage.AddToCartButtonVisibility_Listeners.checkAddToCartButtonVisibility(AddToCartButtonVisibility_Listeners.java:58)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testpackage.AddingItemToCart_Hard_Soft_Assertion#checkProductVisibility</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method testpackage.AddingItemToCart_Hard_Soft_Assertion.checkProductVisibility() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f depends on not successfully finished methods 
-[testpackage.AddingItemToCart_Hard_Soft_Assertion.goToCart() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testpackage.AddingItemToCart_Hard_Soft_Assertion#goToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method testpackage.AddingItemToCart_Hard_Soft_Assertion.goToCart() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f depends on not successfully finished methods 
-[testpackage.AddingItemToCart_Hard_Soft_Assertion.addBookToCart() on instance testpackage.AddingItemToCart_Hard_Soft_Assertion@3e694b3f]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testpackage.AddingItemToCart_Hard_Soft_Assertion#checkBookVisibility</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Redirected To Books Resource<br/>The Desired Book is displayed</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testpackage.AddingItemToCart_Hard_Soft_Assertion#clickOnBooksLink</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The Books link is displayed<br/>Clicked on the BooksLink</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testpackage.AddingItemToCart_Hard_Soft_Assertion#clickOnTheBook</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The Computing And Internet Book is clicked</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testpackage.AddToCartButtonVisibility_Listeners#checkBookPageVisibility</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The checkBookPageVisibility method is started executing<br/>Redirected to Books Link<br/>The Books are present<br/>The checkBookPageVisibility method is Passed</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testpackage.AddToCartButtonVisibility_Listeners#clickOnBooksLink</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The clickOnBooksLink method is started executing<br/>The Book Link in NavBar is displayed<br/>The Books Link in NavBar is Clicked<br/>The clickOnBooksLink method is Passed</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

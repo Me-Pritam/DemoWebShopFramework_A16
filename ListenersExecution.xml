@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Listener Execution Suite">
+    <listeners>
+        <listener class-name="listenerspackage.AddToCartButton_Listener"></listener>
+    </listeners>
+
+    <test name="Listener_Execution">
+        <classes>
+            <class name="testpackage.AddToCartButtonVisibility_Listeners">
+                <methods>
+                    <include name="clickOnBooksLink"/>
+                    <include name="checkBookPageVisibility"/>
+                    <include name="checkAddToCartButtonVisibility"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
