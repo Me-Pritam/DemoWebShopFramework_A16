@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group Execution Suite">
+
+    <test name="Group Execution">
+        <groups>
+            <run>
+                <include name="System"/>
+                <include name="Integration"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testpackage.TestClass1"/>
+
+            <class name="testpackage.TestClass2"/>
+
+        </classes>
+    </test>
+</suite>

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductPagePOM
 {
-    @FindBy(xpath = "//input[@id='add-to-cart-button-13']")
+    @FindBy(xpath = "//input[contains(@id,'add-to-cart-button')]")
     private WebElement addToCartButton;
 
     public ProductPagePOM(WebDriver driver)

@@ -13,21 +13,21 @@ import java.time.Duration;
 
 public class BrowserUtils
 {
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public void openBrowser(String browser)
     {
         switch (browser.toLowerCase())
         {
             case "chrome":
-                driver = new ChromeDriver();
+                tlDriver.set(new ChromeDriver());
                 break;
             case "firefox":
-                driver = new FirefoxDriver();
+                tlDriver.set(new FirefoxDriver());
                 break;
             case "edge":
                 System.setProperty("webdriver.edge.driver","./AllBrowserDrivers/msedgedriver.exe");
-                driver = new EdgeDriver();
+                tlDriver.set(new EdgeDriver());
                 break;
             default:throw new InvalidArgumentException("Incorrect Browser Name");
 
@@ -36,7 +36,7 @@ public class BrowserUtils
 
     public WebDriver getDriver()
     {
-        return driver;
+        return tlDriver.get();
     }
 
     public void maximizeBrowser()

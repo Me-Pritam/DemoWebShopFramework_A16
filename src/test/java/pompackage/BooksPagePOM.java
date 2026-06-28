@@ -12,6 +12,9 @@ public class BooksPagePOM
     @FindBy(xpath = "//div[@class='item-box']/descendant::a[text()='Computing and Internet']")
     private WebElement computingAndInternetBookLink;
 
+    @FindBy(xpath = "//div[@class='item-box']/descendant::a[text()='Fiction']")
+    private WebElement fictionBookLink;
+
     @FindBy(xpath = "//div[@class='product-item']")
     private List<WebElement> allBooksCard;
 
@@ -24,8 +27,14 @@ public class BooksPagePOM
         return computingAndInternetBookLink;
     }
 
+    public WebElement getFictionBookLink() {
+        return fictionBookLink;
+    }
+
     public List<WebElement> getAllBooksCard()
     {
         return allBooksCard;
     }
+
+
 }

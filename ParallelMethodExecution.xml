@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Method Suite">
+    <test parallel="methods" thread-count="4" name="Parallel Method Execution">
+        <classes>
+            <class name="testpackage.Add2BookCart_ParallelMethod">
+                <methods>
+                    <include name="addComputerBookToCart"/>
+                    <include name="addFictionBookToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
