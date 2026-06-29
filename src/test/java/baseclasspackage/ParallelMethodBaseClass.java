@@ -1,5 +1,6 @@
 package baseclasspackage;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -25,17 +26,16 @@ public class ParallelMethodBaseClass
     public ProductPagePOM product;
 
 
-    @BeforeClass
-    public void loadConfig()
-    {
-        property = new PropertyFileUtils();
-        url = property.getData("url");
-        browser = property.getData("browser");
-    }
+
+
 
     @BeforeMethod
     public void doConfig()
     {
+        property = new PropertyFileUtils();
+        url = property.getData("url");
+        browser = property.getData("browser");
+
         browserUtils = new BrowserUtils();
 
         browserUtils.openBrowser(browser);
@@ -49,8 +49,14 @@ public class ParallelMethodBaseClass
         books = new BooksPagePOM(browserUtils.getDriver());
         product = new ProductPagePOM(browserUtils.getDriver());
 
-        actions.clickOnElement(navBar.getBooksLink());
 
+
+    }
+
+    @AfterMethod
+    public void closeSession()
+    {
+        browserUtils.closeBrowser();
     }
 
 }

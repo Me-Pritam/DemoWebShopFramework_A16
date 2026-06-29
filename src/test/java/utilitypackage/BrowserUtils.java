@@ -1,6 +1,7 @@
 package utilitypackage;
 
 import org.openqa.selenium.InvalidArgumentException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -42,6 +43,8 @@ public class BrowserUtils
     public void maximizeBrowser()
     {
         getDriver().manage().window().maximize();
+
+        ((JavascriptExecutor)getDriver()).executeScript("document.body.style.zoom='60%'");
     }
 
     public void openURL(String url)
@@ -57,6 +60,11 @@ public class BrowserUtils
     public void waitForElementsLoad(int num)
     {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(num));
+    }
+
+    public void refreshBrowser()
+    {
+        getDriver().navigate().refresh();
     }
 
     public String getRunningURL()

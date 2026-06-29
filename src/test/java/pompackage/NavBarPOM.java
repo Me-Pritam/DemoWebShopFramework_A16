@@ -3,41 +3,50 @@ package pompackage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class NavBarPOM
 {
-    By registerLink = By.xpath("//a[@href='/register']");
-    By logInLink = By.xpath("//a[@href='/login']");
-    By shoppingCartLinkOnTop = By.xpath("//li[@id='topcartlink']/a[@href='/cart']");
-    By wishListLinkOnTop = By.xpath("//div[@class='header-links']/descendant::a[@href='/wishlist']");
-    By booksLink = By.xpath("//div[@class='header-menu']/descendant::a[@href='/books']");
+    @FindBy(xpath = "//a[@href='/register']")
+    private WebElement registerLink;
+    @FindBy(xpath = "//a[@href='/login']")
+    private WebElement logInLink;
+    @FindBy(xpath = "//li[@id='topcartlink']/a[@href='/cart']")
+    private WebElement shoppingCartLinkOnTop;
+    @FindBy(xpath = "//div[@class='header-links']/descendant::a[@href='/wishlist']")
+    private WebElement wishListLinkOnTop;
+    @FindBy(xpath = "//div[@class='header-menu']/descendant::a[@href='/books']")
+    private WebElement booksLink;
 
-    WebDriver driver;
+
+
 
     public NavBarPOM(WebDriver driver)
     {
-        this.driver = driver;
+
+        PageFactory.initElements(driver,this);
     }
 
     public WebElement getBooksLink()
     {
-        return driver.findElement(booksLink);
+        return booksLink;
     }
 
     public WebElement getRegisterLink() {
-        return driver.findElement(registerLink);
+        return registerLink;
     }
 
     public WebElement getLogInLink() {
-        return driver.findElement(logInLink);
+        return logInLink;
     }
 
     public WebElement getShoppingCartLinkOnTop() {
-        return driver.findElement(shoppingCartLinkOnTop);
+        return shoppingCartLinkOnTop;
     }
 
     public WebElement getWishListLinkOnTop() {
-        return driver.findElement(wishListLinkOnTop);
+        return wishListLinkOnTop;
     }
 
 }

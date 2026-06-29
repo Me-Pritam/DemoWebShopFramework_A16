@@ -1,5 +1,6 @@
 package pompackage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +35,19 @@ public class BooksPagePOM
     public List<WebElement> getAllBooksCard()
     {
         return allBooksCard;
+    }
+
+    public void selectDesiredBook(String bookName)
+    {
+        for(WebElement book : allBooksCard)
+        {
+          String actualBook  = book.findElement(By.xpath("./descendant::h2/a")).getText();
+          if (actualBook.equals(bookName))
+          {
+              book.click();
+              break;
+          }
+        }
     }
 
 
