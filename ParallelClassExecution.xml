@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Class Execution">
+    <test parallel="classes" name="ParallelClassExecution">
+        <classes>
+            <class name="testpackage.ParallelClassAddLaptopToCart">
+                <methods>
+                    <include name="doConfig"/>
+                    <include name="goToComputerPage"/>
+                    <include name="addLaptopToCart"/>
+                    <include name="closeBrowser"/>
+                </methods>
+            </class>
+            <class name="testpackage.ParallelClassAddBooktoCart">
+                <methods>
+                    <include name="doConfig"/>
+                    <include name="goToBookPage"/>
+                    <include name="addBookToCart"/>
+                    <include name="closeBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
