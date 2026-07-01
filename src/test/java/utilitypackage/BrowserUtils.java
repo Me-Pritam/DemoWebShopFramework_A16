@@ -21,14 +21,14 @@ public class BrowserUtils
         switch (browser.toLowerCase())
         {
             case "chrome":
-                tlDriver.set(new ChromeDriver());
+                tlDriver.set(new ChromeDriver(new ChromeOptions().addArguments("--headless")));
                 break;
             case "firefox":
-                tlDriver.set(new FirefoxDriver());
+                tlDriver.set(new FirefoxDriver(new FirefoxOptions().addArguments("-headless")));
                 break;
             case "edge":
                 System.setProperty("webdriver.edge.driver","./AllBrowserDrivers/msedgedriver.exe");
-                tlDriver.set(new EdgeDriver());
+                tlDriver.set(new EdgeDriver(new EdgeOptions().addArguments("--headless")));
                 break;
             default:throw new InvalidArgumentException("Incorrect Browser Name");
 

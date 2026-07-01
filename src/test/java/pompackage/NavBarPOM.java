@@ -19,6 +19,8 @@ public class NavBarPOM
     @FindBy(xpath = "//div[@class='header-menu']/descendant::a[@href='/books']")
     private WebElement booksLink;
 
+    @FindBy(xpath = "//ul[@class='top-menu']/descendant::a[normalize-space()='Computers']")
+    private WebElement computersLink;
 
 
 
@@ -31,6 +33,10 @@ public class NavBarPOM
     public WebElement getBooksLink()
     {
         return booksLink;
+    }
+
+    public WebElement getComputersLink() {
+        return computersLink;
     }
 
     public WebElement getRegisterLink() {
